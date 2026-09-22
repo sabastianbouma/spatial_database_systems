@@ -1,7 +1,6 @@
 -- Drop tables if the exist so that the script can be rerun without errors.
-DROP TABLE IF EXISTS master;
-DROP TABLE IF EXISTS station_extension;
-DROP VIEW IF EXISTS stationstaff;
+DROP TABLE IF EXISTS master CASCADE;
+DROP TABLE IF EXISTS station_extension CASCADE;
 /*
  Task 1
  Currently, the database contains only one of Perth's train routes: Perth to
