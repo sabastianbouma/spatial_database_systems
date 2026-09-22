@@ -16,7 +16,7 @@ DROP TABLE IF EXISTS station_extension CASCADE;
  */
 /* 1. Create a table called Master using Station_Master as your template (it
  requires the same fields and data types). */
-CREATE TABLE IF NOT EXISTS master (
+CREATE TABLE master (
     master_id CHAR(7) NOT NULL,
     last_name VARCHAR(15),
     first_name VARCHAR(15),
@@ -64,7 +64,7 @@ VALUES ('64MT943', 'Cameron', 'Cooper'),
 /* 6. Create a table called Station_Extension from Station ensuring all existing
  records are copied over to Station_Extension. StationID’s are sequential and
  can continue from the last station in the station table. */
-CREATE TABLE IF NOT EXISTS station_extension (
+CREATE TABLE station_extension (
     station_extension_id NUMERIC(2, 0),
     station_name VARCHaR(20),
     vertex_id NUMERIC(3, 0),
