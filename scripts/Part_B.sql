@@ -1,3 +1,4 @@
+DROP VIEW IF EXISTS V_SUBURBBOUNDS CASCADE;
 /* Task 1
  What is the shortest distance between Karrakatta and Perth stations based on
  their station rail vertices “as the crow flies”? In other words, using Pythagoras’

@@ -41,6 +41,8 @@ SELECT stn_master_id,
     phone_num,
     dob
 FROM station_master;
+SELECT *
+FROM master;
 /* 5. Insert the new station master records (only add the data that you know) as
  shown above. */
 ALTER TABLE master
@@ -61,6 +63,8 @@ VALUES ('64MT943', 'Cameron', 'Cooper'),
     ('59DQ592', 'Jennifer Ann', 'Potucek'),
     ('26AB623', 'Thinley', 'Paday'),
     ('19OC305', 'Amanda', 'Tevlone');
+SELECT *
+FROM master;
 /* 6. Create a table called Station_Extension from Station ensuring all existing
  records are copied over to Station_Extension. StationID’s are sequential and
  can continue from the last station in the station table. */
@@ -108,6 +112,8 @@ ALTER TABLE station_extension
 ALTER COLUMN station_name
 SET NOT NULL,
     ADD CONSTRAINT station_extension_station_name_unique UNIQUE (station_name);
+SELECT *
+FROM station_extension;
 /* 8. Add a named primary key constraint to Station_Extension (using ID). */
 ALTER TABLE station_extension
 ADD CONSTRAINT station_extension_station_extension_id_key UNIQUE (station_extension_id);
@@ -128,6 +134,8 @@ VALUES ('Esplanade', '64MT943'),
     ('Rockingham', '59DQ592'),
     ('Warnbro', '26AB623'),
     ('Mandurah', '19OC305');
+SELECT *
+FROM station_extension;
 /* 11. Create a view called StationStaff that lists all station names and IDs from
  the Station_Extension table along with their matching station master and
  station master ID from the Master table, sorted by station name. */

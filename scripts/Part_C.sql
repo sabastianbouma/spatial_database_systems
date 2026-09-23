@@ -103,6 +103,12 @@ VALUES (
         02,
         ST_GEOMFROMTEXT('POINT(387599 6463399)')
     );
+SELECT *
+FROM SUBURB;
+SELECT *
+FROM FEATURESITE;
+SELECT *
+FROM FEATUREPOINT;
 /* Task 2
  After you’ve done all of the inserts, create a spatial index of type GIST on each
  of the three tables. */
