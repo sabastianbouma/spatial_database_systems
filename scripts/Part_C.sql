@@ -6,7 +6,7 @@
  data types and the spatial query capability.
  Add the POSTGIS extension (if it’s not already set up – if it is, it’ll tell you and all
  is fine). */
-CREATE EXTENSION postgis;
+CREATE EXTENSION IF NOT EXISTS postgis;
 -- Please use the create statement below to set up the Suburb table. 
 DROP TABLE IF EXISTS SUBURB;
 CREATE TABLE SUBURB (
@@ -23,7 +23,7 @@ CREATE TABLE SUBURB (
  site as it covers a large area but it may have several related feature points for
  each of its entrances.
  Please use the following create table statements to set them up: */
-DROP TABLE IF EXISTS FEATURESITE;
+DROP TABLE IF EXISTS FEATURESITE CASCADE;
 CREATE TABLE FEATURESITE (
     Name VARCHAR(40),
     Short_name VARCHAR(20),
